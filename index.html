@@ -14,6 +14,56 @@
     <title>Index</title>
   </head>
   <body>
-    <h1>Hi, Mike here.</h1>
+    <div class="wallpaper"></div>
+
+    <!--
+        Why use `srcset=".. 1x, .. 2x"?
+        1. Different devices have different pixel ratios (Retina/non-Retina 😂)
+        2. Display highest def image (browser'll use it depend on your pixel ratio)
+     -->
+    <div class="content">
+      <aside class="side">
+        <figure class="picture">
+          <div class="picture-shadow"></div>
+          <img
+            id="pictureImage"
+            class="picture-image"
+            src="images/alex.jpg"
+            srcset="
+              images/alex.jpg    1x,
+              images/alex@2x.jpg 2x,
+              images/alex@3x.jpg 3x,
+              images/alex@4x.jpg 4x
+            "
+            alt="Portrait of Alex Jefferson"
+            width="320"
+            height="320"
+          />
+        </figure>
+      </aside>
+
+      <main class="about">
+        <h1 class="name">
+          Hi, I'm Alex Jefferson
+        </h1>
+        <p class="job">
+          Tech recruiter
+        </p>
+        <hr class="hr" />
+
+        <div class="description">
+          <p>
+            I spend my time traveling the world, helping startups and tech
+            businesses hire the best people.
+          </p>
+        </div>
+
+        <div class="contact">
+          <a href="mailto:more@imaild.com" class="button">
+            Get in touch
+          </a>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
