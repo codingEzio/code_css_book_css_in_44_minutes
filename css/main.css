@@ -49,3 +49,18 @@ a {
   opacity: 0.2;
   position: fixed;
 }
+
+.content {
+  display: flex; /* now the `.side` and `.about` are both flexbox items */
+  position: relative; /* allows `.content` to appear above `.wallpaper` */
+  min-height: 100vh; /* make sure `.content` covers the whole page */
+}
+
+.side {
+  max-height: 20rem;
+  max-width: 20rem;
+}
+
+.about {
+  max-width: 26rem;
+}
