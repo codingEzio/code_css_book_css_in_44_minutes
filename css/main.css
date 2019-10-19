@@ -27,3 +27,25 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+/* General rules */
+
+.wallpaper {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Specific */
+
+.wallpaper {
+  /* use `img` or CSS: https://stackoverflow.com/a/1469139/6273859 */
+  background-image: url("../images/austria.jpg");
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.2;
+  position: fixed;
+}
