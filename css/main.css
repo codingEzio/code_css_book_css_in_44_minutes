@@ -1,3 +1,29 @@
 html {
-  background-color: bisque;
+  color: #fff;
+
+  /* Acts as a fallback if the `background-image` doesn't load */
+  background-color: #5f45bb;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
+  background-image: linear-gradient(to bottom right, #180cac, #d05404);
+
+  font-family: "Karla", Verdana, sans-serif;
+  font-size: 16px;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+  line-height: 1.5; /* 1.5 * 16px = 24px */
+  min-height: 100vh;
+  min-width: 300px;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x */
+  overflow-x: hidden;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+a {
+  color: currentColor; /* use the `color` values provided by `html` (in our case!) */
+  cursor: pointer;
+  text-decoration: none;
 }
