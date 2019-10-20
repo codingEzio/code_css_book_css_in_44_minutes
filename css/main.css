@@ -266,8 +266,10 @@ a {
   animation-fill-mode: both;
 }
 
-.contact {
-  animation-name: bounceIn;
+.wallpaper,
+.picture-shadow,
+.picture-image {
+  opacity: 0;
 }
 
 .picture-shadow,
@@ -277,14 +279,20 @@ a {
 }
 
 .wallpaper {
-  animation-name: zoomOut;
   animation-timing-function: ease-out;
 }
 
+.wallpaper.is-loaded {
+  animation-delay: 1s;
+  animation-name: zoomOut;
+}
+
+.picture.is-loaded,
 .picture-shadow {
   animation-name: picShadow;
 }
 
+.picture.is-loaded,
 .picture-image {
   animation-name: picImage;
 }
@@ -303,6 +311,10 @@ a {
 
 .description {
   animation-name: slideUp;
+}
+
+.contact {
+  animation-name: bounceIn;
 }
 
 .social li {
