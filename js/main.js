@@ -21,4 +21,9 @@ function loadImage(id, targetId) {
       targetEl.classList.add("is-loaded");
     };
   }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    loadImage("wallpaper");
+    loadImage("pictureImage", "picture");
+  });
 }
