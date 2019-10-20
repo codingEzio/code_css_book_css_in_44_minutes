@@ -30,7 +30,9 @@ a {
 
 /* General rules */
 
-.wallpaper {
+.wallpaper,
+.picture-shadow,
+.picture-image {
   display: block;
   height: 100%;
   left: 0;
@@ -63,6 +65,24 @@ a {
 
 .about {
   max-width: 26rem;
+}
+
+.picture {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.picture-image {
+  border-radius: 9999px; /* to ensure it to be rounded (other args supported) */
+  position: absolute;
+}
+
+.picture-shadow {
+  border-radius: 9999px; /* to ensure it to be rounded (other args supported) */
+  background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+  position: absolute;
+  top: 100%;
 }
 
 /* For small screen */
