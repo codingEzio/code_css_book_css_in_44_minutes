@@ -53,6 +53,11 @@ a {
   transition-duration: 300ms;
 }
 
+.social {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
 /* Specific */
 
 .wallpaper {
@@ -167,6 +172,28 @@ a {
 .button:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transform: scale(0.97) translateY(-2px);
+}
+
+.social li {
+  height: 2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.social a {
+  display: flex;
+  opacity: 0.5;
+
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.5rem; /* the icons are actually text, so you can use this */
+
+  align-items: center;
+  justify-content: center;
+
+  transition-property: opacity, transform;
+  will-change: opacity, transform;
 }
 
 /* For small screen */
