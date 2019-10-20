@@ -47,6 +47,12 @@ a {
   text-transform: uppercase;
 }
 
+.button,
+.social a {
+  transform-origin: center;
+  transition-duration: 150ms;
+}
+
 /* Specific */
 
 .wallpaper {
@@ -129,6 +135,28 @@ a {
   display: inline-block;
   margin-top: 1.5rem;
   vertical-align: top;
+}
+
+.button {
+  color: #9013fe;
+  background-color: #fff;
+
+  border-radius: 999999px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  font-size: 0.875rem;
+  text-shadow: none;
+  line-height: 1em;
+  padding: 1.25em 2em;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select */
+  user-select: none;
+
+  transition-property: box-shadow, transform;
+  will-change: box-shadow, transform;
 }
 
 /* For small screen */
