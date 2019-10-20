@@ -154,6 +154,8 @@ a {
   display: inline-block;
   margin-top: 1.5rem;
   vertical-align: top;
+
+  animation-name: bounceIn;
 }
 
 .button {
