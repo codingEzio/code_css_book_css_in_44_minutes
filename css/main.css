@@ -288,3 +288,25 @@ a {
 .picture-image {
   animation-name: picImage;
 }
+
+.name {
+  animation-name: slideDown;
+}
+
+.job {
+  animation-name: slideUp;
+}
+
+.hr {
+  animation: fillUp;
+}
+
+.description {
+  animation-name: slideUp;
+}
+
+.social li {
+  animation-duration: 500ms;
+  animation-name: slideUp;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
