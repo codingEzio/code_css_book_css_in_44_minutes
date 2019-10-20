@@ -50,7 +50,7 @@ a {
 .button,
 .social a {
   transform-origin: center;
-  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
 
 /* Specific */
@@ -157,6 +157,16 @@ a {
 
   transition-property: box-shadow, transform;
   will-change: box-shadow, transform;
+}
+
+.button:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.03) translateY(-4px);
+}
+
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transform: scale(0.97) translateY(-2px);
 }
 
 /* For small screen */
