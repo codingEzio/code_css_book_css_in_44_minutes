@@ -28,18 +28,48 @@ a {
   text-decoration: none;
 }
 
-.wallpaper,
-.picture-shadow,
-.picture-image,
-.name,
-.job,
-.hr,
-.description,
-.contact,
-.social li {
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
-  animation-fill-mode: both;
+/* Responsive design */
+
+/* For small screen */
+
+@media screen and (max-width: 799px) {
+  .content {
+    flex-direction: column; /* changed from default 'row' to 'column' (vertical) */
+    justify-content: center; /* makes the content centered on the "main axis" */
+    align-items: center; /* makes the content centered on the "cross axis" */
+    padding: 5rem 3rem;
+  }
+
+  .side {
+    margin-bottom: 3rem; /* keep some space from the `.content` */
+    width: 100%;
+  }
+}
+
+/* For bigger screen */
+
+@media screen and (min-width: 800px) {
+  .content {
+    align-items: center;
+    justify-content: space-around; /* as a fallback to 'space-evenly' */
+    justify-content: space-evenly; /* this val isn't available in all browsers */
+    padding: 4rem;
+  }
+
+  .side {
+    /* Check this out https://bit.ly/2BuiLEM (on freeCodeCamp) */
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 20rem;
+    width: 20rem;
+    margin-left: 4rem;
+    order: 2;
+  }
+
+  .about {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
 }
 
 /* General rules */
@@ -154,8 +184,6 @@ a {
   display: inline-block;
   margin-top: 1.5rem;
   vertical-align: top;
-
-  animation-name: bounceIn;
 }
 
 .button {
@@ -222,44 +250,22 @@ a {
   transform: scale(1.1);
 }
 
-/* For small screen */
+/* Animation stuff */
 
-@media screen and (max-width: 799px) {
-  .content {
-    flex-direction: column; /* changed from default 'row' to 'column' (vertical) */
-    justify-content: center; /* makes the content centered on the "main axis" */
-    align-items: center; /* makes the content centered on the "cross axis" */
-    padding: 5rem 3rem;
-  }
-
-  .side {
-    margin-bottom: 3rem; /* keep some space from the `.content` */
-    width: 100%;
-  }
+.wallpaper,
+.picture-shadow,
+.picture-image,
+.name,
+.job,
+.hr,
+.description,
+.contact,
+.social li {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
 }
 
-/* For bigger screen */
-
-@media screen and (min-width: 800px) {
-  .content {
-    align-items: center;
-    justify-content: space-around; /* as a fallback to 'space-evenly' */
-    justify-content: space-evenly; /* this val isn't available in all browsers */
-    padding: 4rem;
-  }
-
-  .side {
-    /* Check this out https://bit.ly/2BuiLEM (on freeCodeCamp) */
-    flex-grow: 0;
-    flex-shrink: 0;
-    height: 20rem;
-    width: 20rem;
-    margin-left: 4rem;
-    order: 2;
-  }
-
-  .about {
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+.contact {
+  animation-name: bounceIn;
 }
