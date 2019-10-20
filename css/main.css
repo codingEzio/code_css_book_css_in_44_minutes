@@ -144,7 +144,7 @@ a {
   border-radius: 9999px; /* to ensure it to be rounded (other args supported) */
   background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
   position: absolute;
-  top: 100%;
+  top: 10%;
 }
 
 .name {
